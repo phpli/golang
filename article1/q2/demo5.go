@@ -2,8 +2,7 @@ package main
 
 import (
 	"flag"
-	"github.com/astaxie/beego"
-	"article1/q2/lib"
+	"phpli/article1/q2/lib"
 )
 
 var name  string
