@@ -1,10 +1,10 @@
 package lib
 
 import (
+	"github.com/phpli/golang/article1/q3/lib/internal"
 	"os"
-	in "phpli/article1/q3/lib/internal"
 )
 
 func Hello(name string)  {
-	in.Hello(os.Stdout,name)
+	internal.Hello(os.Stdout,name)
 }

@@ -2,8 +2,7 @@ package main
 
 import (
 	"flag"
-	//"github.com/astaxie/beego"
-	"phpli/article1/q2/lib"
+	lib2 "github.com/phpli/golang/article1/q2/lib"
 )
 
 var name  string
@@ -15,5 +14,5 @@ func init()  {
 func main()  {
 	flag.Parse()
 	//beego.Run()
-	lib.Hello(name)
+	lib2.Hello(name)
 }

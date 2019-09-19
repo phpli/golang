@@ -33,7 +33,7 @@ func TestHello(t *testing.T)  {
 	}
 	t.Logf("The expected greeting is %q.\n",expected)
 }
-
+//对于功能测试函数来说，其名称必须以Test为前缀，并且参数列*testing.T 仅有
 func testIntroduce(t *testing.T){//请注意这个测试函数的名称。
 	intro := introduce()
 	expected := "Welcome to my Golang column."
