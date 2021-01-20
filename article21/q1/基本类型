@@ -1,0 +1,57 @@
+string
+
+bool
+
+int8、uint8（byte）（无符号）、int16、uint16、int32（rune）、uint32、int64、uint64、int、uint、uintptr。
+float32、float64。
+complex64、complex128。
+
+指针类型 - 类C指针
+结构体类型 - 类C结构体
+函数类型 - 函数类型在Go中是一种一等公民类别
+容器类型，包括:
+数组类型 - 定长容器类型
+切片类型 - 动态长度和容量容器类型
+映射类型（map）- 也常称为字典类型。在标准编译器中映射是使用哈希表实现的。
+通道类型 - 通道用来同步并发的协程
+接口类型 - 接口在反射和多态中发挥着重要角色
+
+*T 指针类型
+[5]T 数组类型 //一个元素类型为T、元素个数为5的数组类型
+[]T //一个元素类型为T的切片类型
+map[Key]T // 一个键值类型为Tkey、元素类型为T的映射类型
+struct {
+    name string
+    age int
+}
+
+// 一个函数类型
+func(int) (bool, string)
+
+// 一个接口类型
+interface {
+	Method0(string) int
+	Method1() (int, bool)
+}
+
+// 几个通道类型
+chan T //双向通道
+chan<- T //接收通道
+<-chan T // 发送通道
+
+type (
+	Name = string
+	Age  = int
+)
+
+Name是内置类型string的一个别名
+
+baseContainer[0 : len(baseContainer)]
+baseContainer[: len(baseContainer)]
+baseContainer[0 :]
+baseContainer[:]
+baseContainer[0 : len(baseContainer) : cap(baseContainer)]
+baseContainer[: len(baseContainer) : cap(baseContainer)]
+
+//创建切片
+make(int[],长度，容量)
