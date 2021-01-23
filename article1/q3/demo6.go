@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"phpli/article1/q3/lib"
+	"golang/article1/q3/lib"
 )
 
 var name string
