@@ -19,12 +19,12 @@ func main() {
 	}
 	fmt.Println("persons:", &persons)
 
-	personss := []Person {{"Alice", 28}, {"Bob", 25}}
+	personss := []Person {{"Alice", 28}, {"Bob", 25}}//切片改变的是底层共享数据
 	for i, p := range personss {
 		fmt.Println(i, p)
 		// 这次，此修改将反映在此次遍历过程中。
 		personss[1].name = "Jack"
-		// 这个修改仍然不会体现在persons切片容器中。
+		// 这个修改仍然不会体现在persons切片容器中。 git
 		p.age = 31
 	}
 	fmt.Println("persons:", &personss)
