@@ -24,7 +24,7 @@ func main() {
 		fmt.Println(i, p)
 		// 这次，此修改将反映在此次遍历过程中。
 		personss[1].name = "Jack"
-		// 这个修改仍然不会体现在persons切片容器中。 git
+		// 这个修改仍然不会体现在persons切片容器中。 git11
 		p.age = 31
 	}
 	fmt.Println("persons:", &personss)
