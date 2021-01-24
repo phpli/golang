@@ -21,11 +21,34 @@ func main() {
 
 	personss := []Person {{"Alice", 28}, {"Bob", 25}}//切片改变的是底层共享数据
 	for i, p := range personss {
-		fmt.Println(i, p)
+		fmt.Println(i, p) //但是此时打印已经发生变化
 		// 这次，此修改将反映在此次遍历过程中。
 		personss[1].name = "Jack"
 		// 这个修改仍然不会体现在persons切片容器中。 git11
 		p.age = 31
 	}
 	fmt.Println("persons:", &personss)
+
+	var a  [100]int
+	for i,n := range &a{ // 复制一个指针的开销很小
+		fmt.Println(i,n)
+	}
+
+	for i, n:= range a[:]{ // 复制一个切片的开销很小
+		fmt.Println(i, n)
+	}
+
+	var p *[5]int // nil
+
+	for i, _ := range p { // okay
+		fmt.Println(i)
+	}
+
+	for i := range p { // okay
+		fmt.Println(i)
+	}
+
+	for i, n := range p { // panic
+		fmt.Println(i, n)
+	}
 }
