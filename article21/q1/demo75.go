@@ -15,8 +15,8 @@ func main()  {
 
 	fmt.Println(des[1:]) //des[1:] -->6 7
 	fmt.Println(des)//此时 des{5,6,7}
-	n = copy(des[1:], des)
-	fmt.Println(des)//为啥变成[5,5,6]
+	n = copy(des[1:], des[0:]) // des 567 去覆盖->67 此时修改的是 des 的底层des元数据
+	fmt.Println(des)//为啥变成[5,5,6] --->
 	fmt.Println(des[1:],cap(des[1:]))
 
 	a :=[4]int{}
