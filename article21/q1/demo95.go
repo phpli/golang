@@ -36,7 +36,7 @@ func main()  {
 		*S
 		T
 	}
-
+	//reflect.SliceHeader{}
 	fmt.Println(unsafe.Offsetof(y.xx))
 	fmt.Println(unsafe.Offsetof(y.S))
 	fmt.Println(unsafe.Offsetof(y.T))

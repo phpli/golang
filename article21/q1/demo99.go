@@ -21,7 +21,7 @@ func main()  {
 	}
 
 	p := unsafe.Pointer(&t)
-
+	//分开写可能导致 变量被回收
 	ty2 := (*int16)(unsafe.Pointer(uintptr(p)+N+M+M))
 	fmt.Println(*ty2) // 789
 }
